@@ -36,7 +36,7 @@
                                     <button class="menu-link" onclick="openTab(event, 'Tab4')">Thông điệp</button>
                                 </li>
                                 <li class="menu-item">
-                                    <button class="menu-link">Đăng ký / Đăng nhập</button>
+                                    <button class="menu-link open-modal" data-target-modal="accountModal">Đăng ký / Đăng nhập</button>
                                 </li>
                             </ul>
                         </div>
@@ -71,8 +71,10 @@
                     </div>
                 </div>
                 <div id="Tab2" class="tab-content hidden-tab">
-                    <div>
-                        <p>This is tab 2</p>
+                    <div class="container">
+                        <div class="diary-container">
+                            <div class="diary"></div>
+                        </div>
                     </div>
                 </div>
                 <div id="Tab3" class="tab-content hidden-tab">
@@ -105,6 +107,11 @@
                 </div>
             </div>
         </div>
+        <div id="accountModal" class="modal account-modal">
+            <div class="sign-in">
+                <h4>Đăng nhập</h4>
+            </div>
+        </div>
         <div id="QRscan" class="modal scan-modal">
             <h4>Ủng hộ tôi một ly cà phê nhé?</h4>
             <div class="scan-qr">
@@ -112,6 +119,20 @@
             </div>
         </div>
         <div id="PodcastModal" class="modal option-modal">
+            <div class="dropdown">
+                <button class="dropdown-btn"><span></span><i class="fa-solid fa-caret-down"></i></button>
+                <ul class="dropdown-list">
+                    <li class="list-item">
+                        Danh sách 1
+                    </li>
+                    <li class="list-item">
+                        Danh sách 2
+                    </li>
+                    <li class="list-item">
+                        Danh sách 3
+                    </li>
+                </ul>
+            </div>
             <h4 class="title">Khai mở tâm hồn với những podcast chất lượng</h4>
             <div class="podcast-audio">
                 <audio id="Podcast" src="./assets/podcast/example-podcast.m4a"></audio>
@@ -120,7 +141,7 @@
                     <div>
                         <button class="audio-btn prev"><i class="fa-solid fa-backward"></i></button>
                         <button class="audio-btn back"><i class="fa-solid fa-arrow-rotate-left"></i></button>
-                        <button class="audio-btn play"><i class="fa-solid fa-play"></i></button>
+                        <button class="audio-btn play play-podcast"><i class="fa-solid fa-play"></i></button>
                         <button class="audio-btn forward"><i class="fa-solid fa-arrow-rotate-right"></i></button>
                         <button class="audio-btn next"><i class="fa-solid fa-forward"></i></button>
                     </div>
@@ -130,15 +151,29 @@
             </div>
         </div>
         <div id="MusicModal" class="modal option-modal">
+            <div class="dropdown">
+                <button class="dropdown-btn"><span></span><i class="fa-solid fa-caret-down"></i></button>
+                <ul class="dropdown-list">
+                    <li class="list-item">
+                        Danh sách 1
+                    </li>
+                    <li class="list-item">
+                        Danh sách 2
+                    </li>
+                    <li class="list-item">
+                        Danh sách 3
+                    </li>
+                </ul>
+            </div>
             <h4 class="title">Khai mở tâm hồn với những podcast chất lượng</h4>
-            <div class="podcast-audio">
+            <div class="music-audio">
                 <audio id="Music" src="./assets/music/atlantis.mp3"></audio>
                 <div class="controls">
                     <button class="audio-btn mix"><i class="fa-solid fa-shuffle"></i></button>
                     <div>
                         <button class="audio-btn prev"><i class="fa-solid fa-backward"></i></button>
                         <button class="audio-btn back"><i class="fa-solid fa-arrow-rotate-left"></i></button>
-                        <button class="audio-btn play"><i class="fa-solid fa-play"></i></button>
+                        <button class="audio-btn play play-music"><i class="fa-solid fa-play"></i></button>
                         <button class="audio-btn forward"><i class="fa-solid fa-arrow-rotate-right"></i></button>
                         <button class="audio-btn next"><i class="fa-solid fa-forward"></i></button>
                     </div>

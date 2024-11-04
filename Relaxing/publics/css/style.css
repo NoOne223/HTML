@@ -27,6 +27,7 @@ img {
 button {
   background-color: transparent;
   border: 0;
+  cursor: pointer;
 }
 
 .container {
@@ -233,6 +234,48 @@ button {
   background-color: rgb(49, 142, 146);
   padding: 20px;
   border-radius: 20px;
+}
+.option-modal .dropdown {
+  position: relative;
+}
+.option-modal .dropdown-btn {
+  color: #ffffff;
+}
+.option-modal .dropdown-btn i {
+  margin-left: 25px;
+  transition: all 0.5s ease-in-out;
+}
+.option-modal .dropdown-btn i.rotate {
+  transform: rotate(180deg);
+}
+.option-modal .dropdown-list {
+  display: none;
+  position: absolute;
+  border-radius: 5px;
+  padding: 10px 25px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  background-color: rgb(49, 142, 146);
+  top: 10px;
+  left: 0;
+  max-height: 150px;
+  overflow: auto;
+}
+.option-modal .dropdown-list::-webkit-scrollbar {
+  width: 2px;
+  height: 8px;
+}
+.option-modal .dropdown-list::-webkit-scrollbar-thumb {
+  background-color: rgb(243, 210, 103);
+  border-radius: 10px;
+  border: 3px solid rgb(243, 210, 103);
+}
+.option-modal .dropdown-list .list-item {
+  cursor: pointer;
+  margin: 10px 0;
+}
+.option-modal .dropdown-list .list-item:hover {
+  color: rgb(243, 210, 103);
 }
 .option-modal .title {
   text-transform: uppercase;
