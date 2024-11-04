@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./publics/css/style.css">
+</head>
+<body>
+    <div class="main-banner">
+        <video class="banner-video" muted autoplay loop>
+            <source src="./assets/video/banner-vid-1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content">
+            <div class="header-layout">
+                <div class="container-fluid">
+                    <nav class="header-nav">
+                        <div class="logo">
+                            <img src="./assets/image/logo.png" alt="logo">
+                        </div>
+                        <div class="nav-menu">
+                            <ul class="menu-list">
+                                <li class="menu-item">
+                                    <button class="menu-link active" onclick="openTab(event, 'Tab1')">Trang chủ</button>
+                                </li>
+                                <li class="menu-item">
+                                    <button class="menu-link" onclick="openTab(event, 'Tab2')">Nhật ký</button>
+                                </li>
+                                <li class="menu-item">
+                                    <button class="menu-link" onclick="openTab(event, 'Tab3')">Danh sách</button>
+                                </li>
+                                <li class="menu-item">
+                                    <button class="menu-link" onclick="openTab(event, 'Tab4')">Thông điệp</button>
+                                </li>
+                                <li class="menu-item">
+                                    <button class="menu-link">Đăng ký / Đăng nhập</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="main-tabs">
+                <div id="Tab1" class="tab-content">
+                    <div id="morning" class="container">
+                        <h2 class="open-word">Chào bạn <br>chúc bạn một ngày tốt lành và mong bạn có thể tận hưởng nó!</h2>
+                    </div>
+                    <div id="afternoon" class="container">
+                        <h2 class="open-word">Xin chào <br>ngày hôm nay của bạn như thế nào?</h2>
+                        <div class="emotion-picker">
+                            <button class="emotion-select"  data-emotion="happy" title="Hôm nay là ngày vui">
+                                <img src="./assets/image/laughing.png" alt="emotion">
+                            </button>
+                            <button class="emotion-select" data-emotion="sad" title="Hôm nay thật tệ">
+                                <img src="./assets/image/sad.png" alt="emotion">
+                            </button>
+                            <button class="emotion-select" data-emotion="angry" title="Hôm nay thật bực mình">
+                                <img src="./assets/image/angry-face.png" alt="emotion">
+                            </button>
+                            <button class="emotion-select" data-emotion="tired" title="Hôm nay thật mệt mỏi">
+                                <img src="./assets/image/tired.png" alt="emotion">
+                            </button>
+                            <button class="emotion-select" data-emotion="inlove" title="Hôm nay tôi có người thương">
+                                <img src="./assets/image/in-love.png" alt="emotion">
+                            </button>
+                        </div>
+                        <p class="emotion-advise"></p>
+                    </div>
+                </div>
+                <div id="Tab2" class="tab-content hidden-tab">
+                    <div>
+                        <p>This is tab 2</p>
+                    </div>
+                </div>
+                <div id="Tab3" class="tab-content hidden-tab">
+                    <div>
+                        <p>This is tab 3</p>
+                    </div>
+                </div>
+                <div id="Tab4" class="tab-content hidden-tab">
+                    <div>
+                        <p>This is tab 4</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-footer container">
+                <div class="donate-scan open-modal" data-target-modal="QRscan">
+                    <img src="./assets/image/ice-coffee.png" alt="coffee">
+                </div>
+                <div class="options">
+                    <button class="option-btn open-modal" data-target-modal="PodcastModal">
+                        <i class="fa-solid fa-radio"></i>
+                        <span>Podcast</span>
+                    </button>
+                    <button class="option-btn open-modal" data-target-modal="MusicModal">
+                        <i class="fa-solid fa-music"></i>
+                        <span>Âm nhạc</span>
+                    </button>
+                    <button class="option-btn change-theme">
+                        <i class="fa-regular fa-image"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="QRscan" class="modal scan-modal">
+            <h4>Ủng hộ tôi một ly cà phê nhé?</h4>
+            <div class="scan-qr">
+                <img src="./assets/image/QR.png" alt="QR code">
+            </div>
+        </div>
+        <div id="PodcastModal" class="modal option-modal">
+            <h4 class="title">Khai mở tâm hồn với những podcast chất lượng</h4>
+            <div class="podcast-audio">
+                <audio id="Podcast" src="./assets/podcast/example-podcast.m4a"></audio>
+                <div class="controls">
+                    <button class="audio-btn mix"><i class="fa-solid fa-shuffle"></i></button>
+                    <div>
+                        <button class="audio-btn prev"><i class="fa-solid fa-backward"></i></button>
+                        <button class="audio-btn back"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+                        <button class="audio-btn play"><i class="fa-solid fa-play"></i></button>
+                        <button class="audio-btn forward"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+                        <button class="audio-btn next"><i class="fa-solid fa-forward"></i></button>
+                    </div>
+                    <button class="audio-btn repeat"><i class="fa-solid fa-repeat"></i></button>
+                    <input type="range" id="seek-bar" class="audio-bar" value="0" />
+                </div>
+            </div>
+        </div>
+        <div id="MusicModal" class="modal option-modal">
+            <h4 class="title">Khai mở tâm hồn với những podcast chất lượng</h4>
+            <div class="podcast-audio">
+                <audio id="Music" src="./assets/music/atlantis.mp3"></audio>
+                <div class="controls">
+                    <button class="audio-btn mix"><i class="fa-solid fa-shuffle"></i></button>
+                    <div>
+                        <button class="audio-btn prev"><i class="fa-solid fa-backward"></i></button>
+                        <button class="audio-btn back"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+                        <button class="audio-btn play"><i class="fa-solid fa-play"></i></button>
+                        <button class="audio-btn forward"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+                        <button class="audio-btn next"><i class="fa-solid fa-forward"></i></button>
+                    </div>
+                    <button class="audio-btn repeat"><i class="fa-solid fa-repeat"></i></button>
+                    <input type="range" id="seek-bar" class="audio-bar" value="0" />
+                </div>
+            </div>
+        </div>
+        <div class="layout"></div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./publics/js/main.js"></script>
+<script src="./publics/js/emotion.js"></script>
+<script>
+    function openTab(evt, tabName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("tab-content");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("menu-link");
+        for (i = 0; i < x.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+</html>
