@@ -50,7 +50,7 @@ $(document).ready(function(){
         $('.layout').hide();
     }
   });
-
+  
   const podcastAudio = $("#Podcast")[0];
   const musicAudio = $("#Music")[0];
   // Hàm để tạm dừng audio còn lại khi một audio đang phát
