@@ -1,0 +1,93 @@
+@import 'mixins';
+
+$primary-color: hsl(0, 0%, 100%);
+$secondary-color: hsl(271, 68%, 32%);
+
+@font-face {
+    font-family: 'Comic';
+    src: url(../font/ComicNAPro-Bold.otf);
+    font-style: normal;
+    font-weight: 500;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Comic', sans-serif;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+h1{
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+section{
+    @include flex-center-vertical;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+}
+
+.text-sm{
+    font-size: 1rem;
+}
+
+.text-md{
+    font-size: 2rem;
+}
+
+.text-xl{
+    font-size: 3rem;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-primary-color{
+    color: $primary-color;
+}
+
+.relative{
+    position: relative;
+}
+
+.container{
+    @include container
+}
+
+.banner{
+    background: url(../../assets/images/banner.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+.layout{
+    @include fixed-0;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    z-index: -1;
+}
+
+.btn{
+    @include button;
+}
+
+.link-btn{
+    color: $secondary-color;
+    border-color: $secondary-color;
+    padding: 15px 10px;
+}
