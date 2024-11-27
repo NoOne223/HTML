@@ -108,11 +108,43 @@
     <section id="section3">
         <div class="container">
             <h2 class="text-xl text-primary-color">Kinh nghiệm</h2>
-            
+            <div class="tab-area">
+                <div class="tab-btn">
+                    <button class="tablinks" onclick="openTab(event, 'Tab1')">London</button>
+                    <button class="tablinks" onclick="openTab(event, 'Tab2')">Paris</button>
+                    <button class="tablinks" onclick="openTab(event, 'Tab3')">Tokyo</button>
+                </div>
+                <div class="tab-content">
+                    <div id="Tab1" class="tabdesc">
+                        <h3>London</h3>
+                        <p>London is the capital city of England.</p>
+                    </div>
+                    <div id="Tab2" class="tabdesc hidden-tab">
+                        <h3>Paris</h3>
+                        <p>Paris is the capital of France.</p> 
+                    </div>
+                    <div id="Tab3" class="tabdesc hidden-tab">
+                        <h3>Tokyo</h3>
+                        <p>Tokyo is the capital of Japan.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <div class="layout"></div>
 </body>
 <script src="./publics/js/main.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    function openTab(evt, tabName) {
+        // Ẩn tất cả các tabcontent
+        $(".tabdesc").hide();
+        // Loại bỏ class "active" từ tất cả các tablinks
+        $(".tablinks").removeClass("active");
+        // Hiển thị tabcontent được chọn
+        $("#" + tabName).show();
+        // Thêm class "active" vào tab được nhấn
+        $(evt.currentTarget).addClass("active");
+    }      
+</script>
 </html>
