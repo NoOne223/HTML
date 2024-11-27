@@ -28,9 +28,33 @@
     cursor: pointer;
 }
 
-@mixin grid-area{
+@mixin border-violet{
+    color: $third-color;
+    border-color: $secondary-color;
+    border-style: solid;
+}
+
+@mixin grid-4-items{
     display: grid;
-    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
 }
 
+@mixin grid-3-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+@mixin flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+@mixin flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

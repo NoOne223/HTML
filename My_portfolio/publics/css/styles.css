@@ -16,6 +16,16 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1.5rem 0;
+}
+
 h1 {
   font-weight: bolder;
   text-transform: uppercase;
@@ -53,6 +63,38 @@ img {
 
 .text-primary-color {
   color: hsl(0, 0%, 100%);
+}
+
+.text-third-color {
+  color: hsl(212, 84%, 61%);
+}
+
+.list-none {
+  list-style: none;
+  padding: 0;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.grid-3-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.min-h-300 {
+  min-height: 300px;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .relative {
@@ -95,9 +137,43 @@ img {
 }
 
 .link-btn {
-  color: hsl(271, 68%, 32%);
+  color: hsl(212, 84%, 61%);
   border-color: hsl(271, 68%, 32%);
+  border-style: solid;
   padding: 15px 10px;
+}
+
+.intro {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.intro .intro-img {
+  width: 30%;
+}
+.intro .intro-img img {
+  height: 100%;
+}
+.intro .intro-content {
+  width: 30%;
+}
+
+.info {
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+.info .info-content {
+  color: hsl(212, 84%, 61%);
+  border-color: hsl(271, 68%, 32%);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  padding: 15px;
+  width: 25%;
+  flex: 1 1 auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
