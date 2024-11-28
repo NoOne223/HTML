@@ -1,4 +1,5 @@
 @import 'mixins';
+@import 'animations';
 
 $primary-color: hsl(0, 0%, 100%);
 $secondary-color: hsl(271, 68%, 32%);
@@ -44,7 +45,7 @@ h1{
     font-size: 4rem;
 }
 
-section{
+.main-content{
     @include flex-center-vertical;
 }
 
@@ -77,6 +78,10 @@ img{
 
 .text-third-color{
     color: $third-color;
+}
+
+.uppercase{
+    text-transform: uppercase;
 }
 
 .list-none{
@@ -114,7 +119,6 @@ img{
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
-    height: 100vh;
 }
 
 .layout{
@@ -187,6 +191,34 @@ img{
     }
 }
 
+.work-ex{
+    max-width: 30%;
+    text-align: end;
+    border-right: 6px solid $secondary-color;
+    padding-right: 15px;
+
+    h2{
+        font-size: 5rem;
+
+        strong{
+            color: $secondary-color;
+        }
+    }
+}
+
+.workplace{
+    max-width: 30%;
+    padding-left: 15px;
+}
+
+.tabdesc{
+    color: $third-color;
+}
+
 .hidden-tab{
     display: none;
+}
+
+.icon{
+    height: 30px;
 }

@@ -1,3 +1,32 @@
+.slide-in-bottom {
+  -webkit-animation: slide-in-bottom 1s ease-out both;
+  animation: slide-in-bottom 1s ease-out both;
+}
+
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: "Comic";
   src: url(../font/ComicNAPro-Bold.otf);
@@ -37,8 +66,8 @@ h1 {
   font-size: 4rem;
 }
 
-section {
-  height: 100%;
+.main-content {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -72,6 +101,10 @@ img {
 
 .text-third-color {
   color: hsl(212, 84%, 61%);
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .list-none {
@@ -119,7 +152,6 @@ img {
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  height: 100vh;
 }
 
 .layout {
@@ -200,8 +232,34 @@ img {
   background-color: hsl(271, 68%, 32%);
 }
 
+.work-ex {
+  max-width: 30%;
+  text-align: end;
+  border-right: 6px solid hsl(271, 68%, 32%);
+  padding-right: 15px;
+}
+.work-ex h2 {
+  font-size: 5rem;
+}
+.work-ex h2 strong {
+  color: hsl(271, 68%, 32%);
+}
+
+.workplace {
+  max-width: 30%;
+  padding-left: 15px;
+}
+
+.tabdesc {
+  color: hsl(212, 84%, 61%);
+}
+
 .hidden-tab {
   display: none;
+}
+
+.icon {
+  height: 30px;
 }
 
 /*# sourceMappingURL=styles.css.map */
