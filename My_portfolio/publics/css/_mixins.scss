@@ -1,5 +1,5 @@
-@mixin fixed-0{
-    position: fixed;
+@mixin absolute-0{
+    position: absolute;
     top: 0;
     left: 0;
     height: 100%;
@@ -11,6 +11,7 @@
     width: 100%;
     margin: auto;
     padding: 10px;
+    z-index: 1;
 }
 
 @mixin flex-center-vertical{
@@ -42,7 +43,6 @@
 @mixin grid-3-items{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
 }
 
 @mixin flex-center{
