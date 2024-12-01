@@ -1,0 +1,21 @@
+@media screen and (min-width: 320px){
+    .main-content{
+        min-height: 100%;
+    }
+
+    .project-area{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .banner{
+        background-attachment: unset;
+    }
+
+    .info-desc{
+        width: 100%;
+    }
+
+    .icon-board{
+        bottom: 0px;
+    }
+}
