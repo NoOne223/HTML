@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Tetfont';
+    src: url(../font/UTM-Azuki.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Tetfont', sans-serif;
+    color: var(--var--text--color);
+    font-size: 24px;
+    --var--banner--color: hsl(1, 100%, 30%);
+    --var--text--color: hsl(40, 100%, 67%);
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--var--banner--color);
+}
+
+/*base style*/
+.uppercase{
+    text-transform: uppercase;
+}
+
+.text-sm{
+    font-size: 1rem;
+}
+
+.text-md{
+    font-size: 2rem;
+}
+
+.text-xl{
+    font-size: 3rem;
+}
+
+.text-lg{
+    font-size: 5rem;
+}
+
+.container{
+    max-width: 1560px;
+    margin: auto;
+    padding: 10px;
+}
+
+.relative{
+    position: relative;
+}
+
+/* Navigation dots customization (optional) */
+#fp-nav ul li a span {
+background: #fff;
+}
+
+.title{
+    text-shadow: -5px 5px 0px black;
+}

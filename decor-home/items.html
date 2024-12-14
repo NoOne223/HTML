@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="./publics/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="bg-menu bg-first-color">
+            <div class="container flex items-center justify-between">
+                <a href="index.html" title="Home"><img class="logo" src="./assets/image/logo.png" alt="Page logo"></a>
+                <nav class="menu">
+                    <ul class="list-none menu-list flex gap-30 text-third-color">
+                        <li class="menu-item">
+                            <a class="menu-link uppercase" href="index.html" title="Home">Homepage</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link uppercase active" href="items.html" title="Home decor">decorative items</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link uppercase" href="" title="Contact">Contact</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link uppercase" title="Account"><i class="fa-solid fa-user"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="relative h-screen flex flex-col justify-center text-center" id="section1">
+            <div>
+                <div class="container">
+                    <h2 class="text-xl uppercase text-second-color">We not only bring creative ideas <br> but also offer high-quality home decor</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minus fugiat numquam voluptates, beatae sint autem delectus, ab excepturi et veritatis! Ipsum perspiciatis fuga, quas totam ullam incidunt culpa in!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div class="slick-tabbtn">
+            <div class="container flex flex-wrap justify-center gap-15">
+                <button type="button" onclick="openTab(event, 'Tab1')" class="btn tabbtn active">Tables</button>
+                <button type="button" onclick="openTab(event, 'Tab2')" class="btn tabbtn">Chair & sofa</button>
+                <button type="button" onclick="openTab(event, 'Tab3')" class="btn tabbtn">Lamps</button>
+                <button type="button" onclick="openTab(event, 'Tab4')" class="btn tabbtn">Storage Furniture</button>
+                <button type="button" onclick="openTab(event, 'Tab5')" class="btn tabbtn">Bedroom Furniture</button>
+                <button type="button" onclick="openTab(event, 'Tab6')" class="btn tabbtn">Dining Room Furniture</button>
+                <button type="button" onclick="openTab(event, 'Tab7')" class="btn tabbtn">Decorative Furniture</button>
+                <button type="button" onclick="openTab(event, 'Tab8')" class="btn tabbtn">Office Furniture</button>
+            </div>
+        </div>
+        <section class="h-screen spacing" id="section2">
+            <div class="container">
+                <div id="Tab1" class="tabcontent">
+                    <h3>London</h3>
+                    <p>London is the capital city of England.</p>
+                </div>
+                <div id="Tab2" class="tabcontent hidden-tab">
+                    <h3>Paris</h3>
+                    <p>Paris is the capital of France.</p> 
+                </div>
+                <div id="Tab3" class="tabcontent hidden-tab">
+                    <h3>Tokyo</h3>
+                    <p>Tokyo is the capital of Japan.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="bg-first-color">
+            <div class="container text-third-color">
+                <h2 class="text-md text-center uppercase">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <i>Thank you for visiting our website. feel free to contact us if you have any questions about the space you want to decorate</i>
+                    <i class="fa-solid fa-quote-right"></i>
+                </h2>
+                <div class="flex flex-wrap items-center gap-15">
+                    <div class="branch flex-auto">
+                        <h2>Branch 1</h2>
+                        <p>123 Truong Chinh street, Tay Thanh ward, Tan Phu district, Ho Chi Minh City</p>
+                    </div>
+                    <div class="branch flex-auto">
+                        <h2>Branch 2</h2>
+                        <p>789 Da Kao Street, District 1, Ho Chi Minh City, Vietnam</p>
+                    </div>
+                    <div class="branch flex-auto">
+                        <h2>Branch 3</h2>
+                        <p>456 Nguyen Trai Street, Thanh Xuan District, Hanoi, Vietnam</p>
+                    </div>
+                </div>
+                <div class="flex gap-30">
+                    <div class="w-half">
+                        <p>
+                            <i>We would greatly appreciate your feedback to help us address any shortcomings and foster long-term development</i>
+                        </p>
+                    </div>
+                    <div class="w-half">
+                        <textarea rows="5" class="w-full form-input"></textarea>
+                        <button type="submit" class="btn secondary-btn">Send feedback</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-second-color text-third-color">
+                <div class="container">
+                    <h2 class="m-0 text-center">This site was created by <a class="text-active-color" href="">Namle</a></h2>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./publics/js/main.js"></script>
+<script>
+    function openTab(evt, tabName) {
+        var $tabcontent = $(".tabcontent");
+        var $tablinks = $(".tabbtn");
+        
+        // Ẩn tất cả các tab content
+        $tabcontent.hide();
+    
+        // Xóa class "active" khỏi tất cả các tab buttons
+        $tablinks.removeClass("active");
+    
+        // Hiển thị tab được chọn và thêm class "active" vào tab button
+        $("#" + tabName).show();
+        $(evt.currentTarget).addClass("active");
+    }
+</script>
+</html>
