@@ -20,6 +20,10 @@ body{
     --var--active--color: #ffa62b;
 }
 
+body.no-scroll{
+    overflow: hidden;
+}
+
 img{
     max-width: 100%;
     height: auto;
@@ -148,6 +152,7 @@ h1, h2, h3, h4, h5, h6{
     border-width: 1px;
     border-style: solid;
     border-radius: 5px;
+    margin: 8px 0;
 }
 
 .form-input{
@@ -155,7 +160,8 @@ h1, h2, h3, h4, h5, h6{
     border-radius: 5px;
     font-size: 18px;
     display: block;
-    margin-bottom: 16px;
+    margin: 16px 0;
+    width: 100%;
 }
 
 .list-none{
@@ -310,9 +316,50 @@ header{
     width: 30%;
 }
 
+.layout{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+
+.open-modal{
+    cursor: pointer;
+}
+
 .modal{
     background-color: white;
     max-width: 1560px;
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    top: -1800px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    transition: top 0.7s ease-out;
+}
+
+.modal.show{
+    top: 0;
+}
+
+.text-btn{
+    background-color: transparent;
+    border: none;
+}
+
+.text-btn:hover{
+    color: var(--var--first--color);
 }
 
 .slick-tabbtn{
@@ -321,7 +368,7 @@ header{
     z-index: 99999;
     background-color: var(--var--third--color);
     padding: 15px 0px;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .tabbtn{
@@ -342,4 +389,60 @@ header{
 
 .hidden-tab{
     display: none;
+}
+
+.custom-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 3px;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+    background-color: var(--var--second--color);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.custom-checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }

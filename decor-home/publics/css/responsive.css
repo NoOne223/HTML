@@ -1,0 +1,8 @@
+@media screen and (min-width: 2000px) {
+    .banner-1 img, .banner-3 img {
+        max-height: 100%;
+    }
+    .photo-gallery{
+        bottom: 150px;
+    }
+}

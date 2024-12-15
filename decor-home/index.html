@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./publics/css/styles.css">
+    <link rel="stylesheet" href="./publics/css/responsive.css">
 </head>
 <body>
     <header>
@@ -24,7 +25,7 @@
                             <a class="menu-link uppercase" href="" title="Contact">Contact</a>
                         </li>
                         <li class="menu-item">
-                            <a class="menu-link uppercase open-modal" title="Account"><i class="fa-solid fa-user"></i></a>
+                            <a class="menu-link uppercase open-modal" title="Account" data-target-modal="signinModal"><i class="fa-solid fa-user"></i></a>
                         </li>
                     </ul>
                 </nav>
@@ -117,9 +118,46 @@
         </section>
     </main>
     <!-- Modals -->
-    <div class="modal" id="accountModal">
-        
+    <div class="modal" id="signinModal">
+        <div class="signin-form">
+            <h2 class="text-xl uppercase text-second-color text-center">Sign In</h2>
+            <form>
+                <div>
+                    <label>Username</label>
+                    <input type="text" class="form-input" required>
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password" class="form-input" required>
+                </div>
+                <div>
+                    <label class="custom-checkbox">Remember me
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <button type="submit" class="btn secondary-btn">Sign In</button>
+            </form>
+            <div>
+                <button type="button" class="text-btn btn">Forgot password</button>
+                <button type="button" class="text-btn btn">Don't have account? Sign-up now!</button>
+            </div>
+        </div>
     </div>
+    <div class="modal" id="signupModal">
+        <div class="signup-form">
+            <h2 class="text-xl uppercase text-second-color text-center">Sign up</h2>
+            <form>
+                <div>
+                    <label>Họ tên</label>
+                    <input class="form-input">
+                </div>
+            </form>
+            <button type="button" class="text-btn">Đã có tài khoản? Đăng nhập ngay</button>
+        </div>
+    </div>
+    <div class="layout"></div>
+    <!-- Footer -->
     <footer>
         <div class="bg-first-color">
             <div class="container text-third-color">
